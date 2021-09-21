@@ -1,0 +1,81 @@
+{
+  "shader_details": [
+    {
+      "houdini_node_name": "VRayNodeBRDFVRayMtl",
+      "houdini_container":"vray_vop_material",
+      "houdini_shader_location":"/mat/",
+      "version": "18.5.532",
+      "shader_givenname": "V-Ray",
+      "prefix":"Vray",
+      "image_details":[
+        {
+          "node_name":"VRayNodeMetaImageFile",
+          "filename_parm":"BitmapBuffer_file"
+        }
+      ]
+    }
+  ],
+  "shader_binds": [
+    {
+      "base": [
+        {
+          "base_cd_r": "diffuser",
+          "base_cd_g": "diffuseg",
+          "base_cd_b": "diffuseb"
+        }
+      ],
+      "specular": [
+        {
+          "roughness_intensity": "roughness",
+          "anisotropy_intensity": "anisotrophy"
+          
+        }
+      ],
+      "reflection": [
+        {
+          "metallic_intensity": "metalness",
+          "reflection_intensity": "reflect_glossiness",
+          "coat_intensity": "coat_amount"
+        }
+      ],
+      "transparency": [
+        {
+          "transparency_intensity": "translucency_amount",
+          "transparency_cd_r": "translucency_colorr",
+          "transparency_cd_g": "translucency_colorg",
+          "transparency_cd_b": "translucency_colorb"
+        }
+      ],
+      "sheen": [
+        {
+          "sheen_intensity": "sheen_glossiness"
+        }
+      ],
+      "emission": [
+        {
+          "emission_intensity": "self_illumination_mult",
+          "emission_cd_r": "self_illuminationr",
+          "emission_cd_g": "self_illuminationg",
+          "emission_cd_b": "self_illuminationb"
+        }
+      ],
+      "opacity": [
+        {
+          "opacity_intensity": "opacity"
+        }
+      ]
+    }
+  ],
+  "shader_maps": [
+    {
+      "base_map": "diffuse",
+      "roughness_map": "roughness",
+      "metallic_map": "metalness",
+      "reflection_map": "reflect_glossiness",
+      "emission_map": "self_illumination",
+      "opacity_map": "opacity",
+      "normal_map":"bump_map"
+      
+    }
+  ]
+}

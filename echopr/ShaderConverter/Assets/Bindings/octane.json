@@ -1,0 +1,58 @@
+{
+  "shader_details": [
+    {
+      "houdini_node_name": "octane::NT_MAT_UNIVERSAL",
+      "houdini_container":"octane_vopnet",
+      "houdini_shader_location":"/mat/",
+      "version": "18.5.351",
+      "shader_givenname": "Octane",
+      "prefix":"OCT",
+      "image_details":[
+        {
+          "node_name":"octane::NT_TEX_IMAGE",
+          "filename_parm":"A_FILENAME"
+        }
+      ]
+    }
+  ],
+  "shader_binds": [
+    {
+      "base": [
+        {
+          "base_cd_r": "albedor",
+          "base_cd_g": "albedog",
+          "base_cd_b": "albedob"
+        }
+      ],
+      "specular": [
+        {
+          "ior_intensity": "index4",
+          "roughness_intensity": "roughness",
+          "anisotropy_intensity": "anisotrophy"
+          
+        }
+      ],
+      "reflection": [
+        {
+          "metallic_intensity": "metallic",
+          "reflection_intensity": "specular"
+        }
+      ],
+      "opacity": [
+        {
+          "opacity_intensity": "opac"
+        }
+      ]
+    }
+  ],
+  "shader_maps": [
+    {
+      "base_map": "albedo",
+      "roughness_map": "roughness",
+      "metallic_map": "metallic",
+      "reflection_map": "specular",
+      "opacity_map": "opacity",
+      "normal_map":"normal"
+    }
+  ]
+}

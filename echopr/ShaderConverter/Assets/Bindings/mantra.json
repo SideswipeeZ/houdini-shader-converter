@@ -1,0 +1,98 @@
+{
+  "shader_details": [
+    {
+      "houdini_node_name": "principledshader::2.0",
+      "houdini_container":"SELF",
+      "houdini_shader_location":"/mat/",
+      "version": "18.5.351",
+      "shader_givenname": "Mantra",
+      "prefix":"MA",
+      "image_details":[
+        {
+          "node_name":"SELF",
+          "filename_parm":"_useTexture"
+        }
+      ]
+    }
+  ],
+  "shader_binds": [
+    {
+      "base": [
+        {
+          "base_intensity": "albedomult",
+          "base_cd_r": "basecolorr",
+          "base_cd_g": "basecolorg",
+          "base_cd_b": "basecolorb"
+        }
+      ],
+      "specular": [
+        {
+          "ior_intensity": "ior",
+          "roughness_intensity": "rough",
+          "anisotropy_intensity": "aniso"
+          
+        }
+      ],
+      "reflection": [
+        {
+          "metallic_intensity": "metallic",
+          "reflection_intensity": "reflect",
+          "coat_intensity": "coat",
+          "coat_roughness": "coatrough"
+        }
+      ],
+      "transparency": [
+        {
+          "transparency_intensity": "transparency",
+          "transparency_cd_r": "transcolorr",
+          "transparency_cd_g": "transcolorg",
+          "transparency_cd_b": "transcolorb",
+          "transparency_depth": "transdist"
+        }
+      ],
+      "subsurface_scattering": [
+        {
+          "sss_intensity": "sss",
+          "sss_depth": "sssdist",
+          "sss_cd_r": "ssscolorr",
+          "sss_cd_g": "ssscolorg",
+          "sss_cd_b": "ssscolorb"
+        }
+      ],
+      "sheen": [
+        {
+          "sheen_intensity": "sheen",
+          "sheen_tint": "sheentint"
+        }
+      ],
+      "emission": [
+        {
+          "emission_intensity": "emitint",
+          "emission_cd_r": "emitcolorr",
+          "emission_cd_g": "emitcolorg",
+          "emission_cd_b": "emitcolorb"
+        }
+      ],
+      "opacity": [
+        {
+          "opacity_intensity": "opac",
+          "opacity_cd_r": "opaccolorr",
+          "opacity_cd_g": "opaccolorg",
+          "opacity_cd_b": "opaccolorb"
+        }
+      ]
+    }
+  ],
+  "shader_maps": [
+    {
+      "base_map": "basecolor_texture",
+      "roughness_map": "rough_texture",
+      "metallic_map": "metallic_texture",
+      "reflection_map": "reflect_texture",
+      "emission_map": "emitcolor_texture",
+      "opacity_map": "opaccolor_texture",
+      "normal_map":"baseNormal_texture"
+      
+    }
+  ]
+}

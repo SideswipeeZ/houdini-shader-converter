@@ -1,0 +1,11 @@
+Script:
+import shader_conv_echopr as shaderConv
+
+shaderConvWin = shaderConv.ShaderConv()
+shaderConvWin.resize(360,500)
+shaderConvWin.show()
+
+Options:
+Name: Shader_Converter_echopr
+Label: Shader Converter 0.1
+Icon: hicon:/SVGIcons.index?COP2_aidenoise.svg

@@ -1,0 +1,92 @@
+{
+  "shader_details": [
+    {
+      "houdini_node_name": "redshift::Material",
+      "houdini_container":"redshift_vopnet",
+      "houdini_shader_location":"/mat/",
+      "version": "18.5.532",
+      "shader_givenname": "Redshift",
+      "prefix":"RS",
+      "image_details":[
+        {
+          "node_name":"redshift::TextureSampler",
+          "filename_parm":"tex0"
+        }
+      ]
+    }
+  ],
+  "shader_binds": [
+    {
+      "base": [
+        {
+          "base_intensity": "diffuse_weight",
+          "base_cd_r": "diffuse_colorr",
+          "base_cd_g": "diffuse_colorg",
+          "base_cd_b": "diffuse_colorb"
+        }
+      ],
+      "specular": [
+        {
+          "ior_intensity": "refl_ior",
+          "roughness_intensity": "refl_roughness",
+          "anisotropy_intensity": "refl_aniso"
+          
+        }
+      ],
+      "reflection": [
+        {
+          "reflection_intensity": "refl_weight",
+          "coat_intensity": "coat_weight",
+          "coat_roughness": "coat_roughness"
+        }
+      ],
+      "transparency": [
+        {
+          "transparency_intensity": "refr_weight",
+          "transparency_cd_r": "refr_colorr",
+          "transparency_cd_g": "refr_colorg",
+          "transparency_cd_b": "refr_colorb",
+          "transparency_depth": "refr_absorption_scale"
+        }
+      ],
+      "subsurface_scattering": [
+        {
+          "sss_intensity": "ms_amount",
+          "sss_depth": "ms_radius_scale",
+          "sss_cd_r": "ms_color0r",
+          "sss_cd_g": "ms_color0g",
+          "sss_cd_b": "ms_color0b"
+        }
+      ],
+      "sheen": [
+        {
+          "sheen_intensity": "sheen_weight"
+        }
+      ],
+      "emission": [
+        {
+          "emission_intensity": "emission_weight",
+          "emission_cd_r": "emission_colorr",
+          "emission_cd_g": "emission_colorg",
+          "emission_cd_b": "emission_colorb"
+        }
+      ],
+      "opacity": [
+        {
+          "opacity_cd_r": "opacity_colorr",
+          "opacity_cd_g": "opacity_colorg",
+          "opacity_cd_b": "opacity_colorb"
+        }
+      ]
+    }
+  ],
+  "shader_maps": [
+    {
+      "base_map": "diffuse_color",
+      "roughness_map": "refl_roughness",
+      "reflection_map": "refl_weight",
+      "emission_map": "emission_color",
+      "opacity_map": "opacity_color"
+    }
+  ]
+}

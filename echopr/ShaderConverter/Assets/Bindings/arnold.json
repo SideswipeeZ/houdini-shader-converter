@@ -1,0 +1,96 @@
+{
+	"shader_details": [
+		{
+			"houdini_node_name": "arnold::standard_surface",
+			"houdini_container":"arnold_materialbuilder",
+			"houdini_shader_location":"/mat/",
+			"version": "18.5.351",
+			"shader_givenname": "Arnold",
+			"prefix":"Ai",
+			"image_details":[
+				{
+					"node_name":"arnold::image",
+					"filename_parm":"filename"
+				}
+			]
+		}
+	],
+	"shader_binds": [
+		{
+			"base": [
+				{
+					"base_intensity": "base",
+					"base_cd_r": "base_colorr",
+					"base_cd_g": "base_colorg",
+					"base_cd_b": "base_colorb"
+				}
+			],
+			"specular": [
+				{
+					"ior_intensity": "specular_IOR",
+					"roughness_intensity": "specular_roughness",
+					"anisotropy_intensity": "specular_anisotrophy"
+					
+				}
+			],
+			"reflection": [
+				{
+					"metallic_intensity": "metalness",
+					"reflection_intensity": "specular",
+					"coat_intensity": "coat",
+					"coat_roughness": "coat_roughness"
+				}
+			],
+			"transparency": [
+				{
+					"transparency_intensity": "transmission",
+					"transparency_cd_r": "transmission_colorr",
+					"transparency_cd_g": "transmission_colorg",
+					"transparency_cd_b": "transmission_colorb",
+					"transparency_depth": "transmission_depth"
+				}
+			],
+			"subsurface_scattering": [
+				{
+					"sss_intensity": "subsurface",
+					"sss_depth": "subsurface_scale",
+					"sss_cd_r": "subsurface_colorr",
+					"sss_cd_g": "subsurface_colorg",
+					"sss_cd_b": "subsurface_colorb"
+				}
+			],
+			"sheen": [
+				{
+					"sheen_intensity": "sheen"
+				}
+			],
+			"emission": [
+				{
+					"emission_intensity": "emission",
+					"emission_cd_r": "emission_colorr",
+					"emission_cd_g": "emission_colorg",
+					"emission_cd_b": "emission_colorb"
+				}
+			],
+			"opacity": [
+				{
+					"opacity_cd_r": "opacityr",
+					"opacity_cd_g": "opacityg",
+					"opacity_cd_b": "opacityb"
+				}
+			]
+		}
+	],
+	"shader_maps": [
+		{
+			"base_map": "base_color",
+			"roughness_map": "specular_roughness",
+			"metallic_map": "metalness",
+			"reflection_map": "specular",
+			"emission_map": "emission",
+			"opacity_map": "opacity",
+			"normal_map":"normal"
+			
+		}
+	]
+}

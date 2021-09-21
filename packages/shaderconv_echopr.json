@@ -1,0 +1,20 @@
+{
+    "enable" : true,
+    "env": 
+    [
+    	{
+    		"HOUDINI_PATH" :
+    		{
+                "value": "$HOUDINI_PACKAGE_PATH/../echopr/ShaderConverter",
+        	},
+            "ShaderConv_echopr_PATH" :
+            {
+                "value": "$HOUDINI_PACKAGE_PATH/../echopr/ShaderConverter",
+            },
+			"PYTHONPATH" :
+			{
+				"value": "$HOUDINI_PACKAGE_PATH/../echopr/ShaderConverter/python",
+			}
+    	}
+    ]
+}
