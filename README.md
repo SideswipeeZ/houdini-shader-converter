@@ -13,9 +13,9 @@ To install the Tool using Manual Instructions, Extract the **echopr** and **pack
 Then Create a Shelf tool with the following:
 
 Options:
-Name: **Shader_Converter_echopr**
-Label: **Shader Converter 0.1**
-Icon: **hicon:/SVGIcons.index?COP2_aidenoise.svg**
+* Name: **Shader_Converter_echopr**
+* Label: **Shader Converter 0.1**
+* Icon: **hicon:/SVGIcons.index?COP2_aidenoise.svg**
 
 Code:
 ```
