@@ -1,10 +1,9 @@
 # Houdini Shader Converter
-
 ## Overview
 *This tool as of **v0.1** only allows converting Mantra shaders to a appropriate 3rd party shader. (See Compatibility List)*
 
 This tool allows the convertion of shaders from parameters specified inside external JSON files found in the Bindings Folder.
-
+![HouShaderConvHeader](https://github.com/SideswipeeZ/houdini-shader-converter/blob/main/git/ui_cap.png)
 ## Installation
 *This tool can exist for both Python2 and Python 3 Builds of Houdini in the same Folder. (Tested in 18.5)*
 ### Manual Install
