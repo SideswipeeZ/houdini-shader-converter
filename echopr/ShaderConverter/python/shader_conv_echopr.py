@@ -10,7 +10,7 @@ class ShaderConv(QtWidgets.QMainWindow):
     def __init__(self, parent=hou.qt.mainWindow()): # parent=hou.qt.mainWindow()
         super(ShaderConv, self).__init__(parent) #QtCore.Qt.WindowStaysOnTopHint
         #File Interface File goes here
-        file_interface = os.path.join(root_path + "\\Assets\\GUI\\shaderConv.ui")
+        file_interface = os.path.join(root_path, "Assets", "GUI", "shaderConv.ui")
         self.mw = QtCompat.loadUi(file_interface)
         self.setCentralWidget(self.mw)
 
@@ -57,21 +57,21 @@ class ShaderConv(QtWidgets.QMainWindow):
         self.mw.cmb_load2.clear()
         
     def getBindPath(self):
-        return(os.path.join(root_path + "\\Assets\\Bindings"))
+        return(os.path.join(root_path, "Assets", "Bindings"))
         
     def getTargetExt(self):
         return(".json")
         
     def changeButtonIcon(self,basename):
-        icoPath = os.path.join(root_path + "\\Assets\\GUI\\icons")
+        icoPath = os.path.join(root_path, "Assets", "GUI", "icons")
         try:
-            iconPix = QtGui.QIcon(os.path.join(icoPath + "\\" + basename.lower() + ".png"))
+            iconPix = QtGui.QIcon(os.path.join(icoPath, basename.lower() + ".png"))
             return(iconPix)
         except:
             pass
         
     def loadInit(self):
-        #bindPath = os.path.join(root_path + "\\Assets\\Bindings")
+        #bindPath = os.path.join(root_path, "Assets", "Bindings")
         self.consoleOut("Loading Items...")
         bindPath = self.getBindPath()
         target_ext = self.getTargetExt()
@@ -297,8 +297,8 @@ class ShaderConv(QtWidgets.QMainWindow):
                      
     def convertButton(self):
         self.consoleOut("Attempting to Convert from: " + self.mw.cmb_load1.currentText() + " To: " + self.mw.cmb_load2.currentText())
-        fileLoc1 = os.path.join(self.getBindPath() + "\\" + self.mw.cmb_load1.currentText().lower() + self.getTargetExt())
-        fileLoc2 = os.path.join(self.getBindPath() + "\\" + self.mw.cmb_load2.currentText().lower() + self.getTargetExt())
+        fileLoc1 = os.path.join(self.getBindPath(), self.mw.cmb_load1.currentText().lower() + self.getTargetExt())
+        fileLoc2 = os.path.join(self.getBindPath(), self.mw.cmb_load2.currentText().lower() + self.getTargetExt())
         
         #Globals
         file1_data = self.getFileData(fileLoc1)
